@@ -22,7 +22,10 @@ function theme_setup() {
 	* You can allow clients to create multiple menus by
   * adding additional menus to the array. */
 	register_nav_menus( array(
-		'primary' => 'Primary Navigation'
+		'primary' => 'Primary Navigation',
+		'footer_menu' => 'Footer Menu',
+		'blog_categories' => 'Blog Category Menu',
+		'social' => 'Social Nav'
 	) );
 
 	/*
@@ -175,6 +178,17 @@ function hackeryou_widgets_init() {
 		'after_title' => '</h3>',
 	) );
 
+	$secondWidgetArea = array(
+		'name' => 'Footer Widget Area',
+		'id' => 'footer-widget-area',
+		'description' => 'The footer widget area',
+		'before_widget' => '<div class="footer-widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="footer-widget-title">',
+		'after_title' => '</h3>'
+	 );
+
+	register_sidebar($secondWidgetArea);
 }
 
 add_action( 'widgets_init', 'hackeryou_widgets_init' );
