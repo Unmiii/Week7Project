@@ -1,0 +1,167 @@
+.mainPage .container .content {
+	width: 100%;
+	margin: 0;
+}
+
+nav.homeMainNav li a {
+	// color: rgba(187, 23, 74, 0.9);
+	// color: rgba(187, 52, 83, 0.9);
+	color: rgba(0, 128, 0, 0.85);
+	transition: all 0.35s;
+	&:hover {
+		// color: rgba(187, 52, 83, 0.75);
+		color: rgba(5, 193, 5, 0.85);
+	}
+}
+
+.homeDetails {
+	height: 630px;
+	width: 100%;
+	background: url("./images/tea19.jpg") center;
+	background-size: cover;
+	background-attachment: fixed;
+	// filter: opacity(0.9) grayscale(20%);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: rgba(255, 255, 255, 0.8);
+	.homeLogo {
+		color: rgba(255, 255, 255, 0.8);
+	}
+	h2.homeh2 {
+		position: relative;
+		top: -3%;
+	}
+	svg {
+		width: 40px;
+		position: absolute;
+	}
+	svg.homeLeft {
+		left: 43%;
+		transform: scaleX(1) rotate(-9deg);
+		fill: rgba(16, 84, 16, 0.8);
+		top: 40%;
+	}
+	svg.homeRight {
+		left: 54%;
+		transform: scaleX(-1) rotate(-9deg);
+		fill: rgba(16, 84, 16, 0.95);
+		top: 40%;
+	}
+}
+
+.homeDetails h1, .homeDetails h2, .homeDetails h3, .homeDetails h4, .homeDetails p, .homeDetails a {
+	font-family: 'Alegreya Sans', sans-serif; 
+	margin: 0;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.homeDetails h1 {
+	font-size: 5rem;
+}
+
+.letter_fun, .letters{
+	font-weight: bolder;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
+
+.letter_fun {
+	padding-bottom: 9px;
+	// padding-bottom: 20px;
+}
+
+.letter_fun .char1 {position: relative; top: 16px; left:-5px;}
+.letter_fun .char2 {position: relative; top: 10px; left: -5px;}
+.letter_fun .char3 {position: relative; top: 4px; left: -5px;}
+.letter_fun .char4 {position: relative; top: 1px; left: -4px;}
+.letter_fun .char5 {position: relative; top: -1px; left: -3px;}
+.letter_fun .char7 {position: relative; top: -3px; left: 0px;}
+.letter_fun .char8 {position: relative; top: -3px; left: 1px;}
+.letter_fun .char9 {position: relative; top: -2px; left: 3px;}
+.letter_fun .char10 {position: relative; top: 1px; left: 4px;}
+.letter_fun .char12 {position: relative; top: 6px; left: 6px;}
+.letter_fun .char13 {position: relative; top: 10px; left: 5px;}
+.letter_fun .char14 {position: relative; top: 17px; left: 5px;}
+
+.letters {
+	// padding-top: 20px;
+	letter-spacing: 2px;
+}
+.letters .char1 {position: relative; top:-10;}
+.letters .char2 {position: relative; top:-5;}
+.letters .char3 {position: relative; top:-2;}
+.letters .char5 {position: relative; top:-1;}
+.letters .char6 {position: relative; top:-2;}
+.letters .char7 {position: relative; top:-5;}
+.letters .char8 {position: relative; top:-10;}
+
+.address {
+	// padding-top: 15px;
+}
+
+.homeMainNav {
+    position: fixed;
+    z-index: 1002;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background: rgba(245, 245, 245, 0.95);
+}
+
+section.homeContent {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.homeContentWrapper {
+	width: 50%;
+	float: left;
+	background: #ffffffd8;
+	h2.homeContent {
+	text-align: center;
+	margin: 80px 0 30px;
+	text-transform: uppercase;
+	}
+	p {
+		text-align: left;
+		margin: 15px 40px;
+	}
+}
+
+.homeImage {
+	width: 50%;
+	background: url(./images/crumpets3.jpg) no-repeat center;
+	background-size: cover;
+	height: 100vh;
+	float: left;
+}
+
+#gallery-1 {
+	clear: both;
+
+}
+
+.homeProductsInfo {
+	width: 50%;
+	float: left;
+	h2 {
+	text-align: center;
+	margin: 80px 0 30px;
+	text-transform: uppercase;
+	}
+	p {
+		text-align: left;
+		margin: 15px 30px;
+	}
+}
+
+.homeProductsImage {
+	width: 50%;
+	background: url(./images/tea20.jpg) no-repeat center;
+	background-size: cover;
+	height: 100vh;
+	float: left;
+}

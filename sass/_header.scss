@@ -1,0 +1,87 @@
+.cartMenu {
+	display: flex;
+	justify-content: flex-end;
+	background: rgba(0, 0, 0, 0.95);
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1001;
+	border-bottom: 2px ridge #231F1F;
+}
+
+.cart-widget {
+	display: flex;
+	align-items: center;
+}
+
+#searchform {
+	position: relative;
+}
+
+input[type=search] {
+	border-radius: 5px;
+}
+
+#searchform input[type=submit] {
+	font-size: 0.5rem;
+	position: absolute;
+	top: 5px;
+	right: 3px;
+}
+
+.logoWrapper {
+	display: flex;
+	// background: rgba(51, 51, 51, 0.9);
+	background: rgba(0, 0, 0, 0.85);
+	position: fixed;
+	top: 39px;
+	right: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+.logoInfoWrapper {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.logo {
+	margin: 0 50px;
+	// padding: 5px;
+	h2 {
+		font-size: 1rem;
+		text-align: center;
+		position: relative;
+		top: -10px;
+	}
+}
+
+svg {
+	width: 40px;
+	position: absolute;
+}
+
+svg.left {
+	left: 0;
+	transform: scaleX(1) rotate(-9deg);
+	fill: rgba(234,211,204,.8);
+	top: 35%;
+}
+
+svg.right {
+	right: 0;
+	transform: scaleX(-1) rotate(-9deg);
+	fill: rgba(234,211,204,.8);
+	top: 35%;
+}
+
+.main {
+    width: 94%;
+    margin: 0 3%;
+    position: relative;
+    top: 126px;
+}

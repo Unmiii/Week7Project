@@ -9,6 +9,9 @@
 
 @import 'normalize';
 @import 'typography';
+@import 'frontPage';
+@import 'page';
+@import 'header';
 @import 'navigation';
 @import 'sidebar';
 @import 'comments';
@@ -25,22 +28,61 @@ img {
 
 body {
 	color: #333;
+	margin: 0;
+	padding: 0;
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1360px;
 	margin: 0 auto;
 }
 
 .content {
 	float: left;
-	width: 65%;
-	margin-right: 5%;
+	width: 69%;
+	margin: 0 3%;
+	text-align: center;
 }
 
 .full {
 	width: 100%;
 }
+
+.contentWrapper {
+	width: 94%;
+	margin: 0 3%;
+}
+
+header h1, header h2, header h3, header h4, header p, header a {
+	font-family: 'Alegreya Sans', sans-serif; 
+	margin: 0;
+	color: rgba(255, 255, 255, 0.8);
+	transition: all 0.35s;
+}
+
+header a:hover {
+	// color: rgba(194, 50, 95, 0.85);
+	color: rgba(34, 113, 67, 0.85);
+}
+
+.logo h1 a {
+	font-size: 5rem;
+}
+
+.logo h1 a, .logo h2 {
+	// color: rgba(194, 50, 95, 0.85);
+	// color: rgba(235,175,175,.8);
+	// color: rgba(34, 113, 67, 0.85);
+	// color: rgba(61, 187, 36, 0.8);
+	color: rgba(95, 169, 80, 0.8);
+	transition: all 0.35s;
+	&:hover {
+		// color: rgba(61, 187, 36, 0.85);
+		color: rgba(34, 113, 67, 0.85);
+	}
+}
+
+
 
 
 

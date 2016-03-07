@@ -25,7 +25,8 @@ function theme_setup() {
 		'primary' => 'Primary Navigation',
 		'footer_menu' => 'Footer Menu',
 		'blog_categories' => 'Blog Category Menu',
-		'social' => 'Social Nav'
+		'social' => 'Social Nav',
+		'cart' => 'Cart Menu'
 	) );
 
 	/*
@@ -49,6 +50,8 @@ function hackeryou_styles(){
 	wp_enqueue_style('style', get_stylesheet_uri() );
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+
+	wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Alegreya+Sans:300,700italic,400');
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
@@ -189,6 +192,18 @@ function hackeryou_widgets_init() {
 	 );
 
 	register_sidebar($secondWidgetArea);
+
+	$thirdWidgetArea = array(
+		'name' => 'Cart Widget Area',
+		'id' => 'cart-widget-area',
+		'description' => 'The Cart widget area',
+		'before_widget' => '<div class="cart-widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="cart-widget-title">',
+		'after_title' => '</h3>'
+	 );
+
+	register_sidebar($thirdWidgetArea);
 }
 
 add_action( 'widgets_init', 'hackeryou_widgets_init' );
@@ -290,3 +305,51 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+
+/* hackeryou_get_thumbnail_url: Return current post thumbnail url */
+function hackeryou_get_thumbnail_url($post) {
+// Here, we didn't just use get_thumbnail_url because we didn't want any conflicts with names later on. That is why we prefaced it with hackeryou,
+	$imageID = get_post_thumbnail_id($post->ID);
+	$imageURL = wp_get_attachment_url($imageID);
+	return $imageURL;
+}
+
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 ); add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 ); function remove_width_attribute( $html ) { $html = preg_replace( '/(width|height)="\d*"\s/', "", $html ); return $html; }
+
+// Customize font-size of tag cloud widget
+// add_filter('widget_tag_cloud_args','set_number_tags');
+// function set_number_tags($args) {
+// $args = array('smallest'    => 11, 'largest'    => 11);
+// return $args;
+// }
+
+// Register Script
+function get_custom_scripts() {
+// From: http://wp.me/pxhFk-4UE
+    wp_deregister_script( 'lettering_js' );
+    wp_register_script( 'lettering_js', '//cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js', array( 'jquery' ), '0.6.1', false );
+    wp_enqueue_script( 'lettering_js' );
+ 
+}
+ 
+// Hook into the 'wp_enqueue_scripts' action
+add_action( 'wp_enqueue_scripts', 'get_custom_scripts' );
+
+
+// function themeslug_theme_customizer( $wp_customize ) {
+//     // Fun code will go here
+// 	$wp_customize->add_section( 'themeslug_logo_section' , array(
+// 	    'title'       => ( 'Logo', 'themeslug' ),
+// 	    'priority'    => 30,
+// 	    'description' => 'Upload a logo to replace the default site name and description in the header',
+// 	    $wp_customize->add_setting( 'themeslug_logo' );
+// 	    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_logo', array(
+// 	        'label'    => ( 'Logo', 'themeslug' ),
+// 	        'section'  => 'themeslug_logo_section',
+// 	        'settings' => 'themeslug_logo',
+// 	    ) ) );
+// 	) );
+// }
+// add_action( 'customize_register', 'themeslug_theme_customizer' );
+
+/* <div class="heroImage" style="background: url('<?php the_post_thumbnail_url('full') ?>') no-repeat; background-size: cover;"></div> */

@@ -1,14 +1,42 @@
 ul.menu {
+	margin: 10px 5px;
+	padding: 0;
+	li {
+		display: inline;
+		// margin-right: 10px;
+		a {
+			// color: #333;
+			padding: 10px;
+			// background: #333;
+			// color: #ffffffd8;
+		}
+	}
+}
+
+.mainNav {
+	// background: #2b2b2b;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    ul li {
+    	font-size: 1.5rem;
+    	margin: 0 50px; 	
+    	text-transform: uppercase;
+    }
+}
+
+.socialNav ul.menu {
 	margin: 0;
 	padding: 0;
 	li {
 		display: inline;
-		margin-right: 10px;
 		a {
-			color: #333;
+			// color: #333;
 			padding: 10px;
-			background: #333;
-			color: white;
+			// background: #333;
+			// color: silver;
 		}
 	}
 }
