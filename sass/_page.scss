@@ -1,0 +1,140 @@
+// #wpcf7-f40-p9-o1 {
+// 	padding-bottom: 30px;
+// }
+// .contactForm p {
+// 	display: flex;
+// 	padding-right: 15px;
+// 	input[type=text], input[type=email], textarea {
+// 		width: 80%;
+// 		margin-left: 25px;
+// 	}
+// }
+// span.wpcf7-form-control-wrap .your-name, span.wpcf7-form-control-wrap .your-name {
+// 	width: 60%;
+// 	margin-left: 25px;
+// }
+.content h2 {
+	text-align: center;
+	width: 100%;
+	font-size: 2rem;
+	margin-bottom: 0;
+}
+
+.content h3 p {
+	margin-bottom: 20px;
+}
+
+.contactForm p {
+	margin: 0 0 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.contactForm span input, .contactForm span textarea {
+	width: 70%;
+	border-radius: 5px;
+	border: 3px ridge rgba(90, 89, 89, 0.7);
+	&:focus {
+		border: 3px ridge rgba(95,169,80,0.8);
+	}
+}
+
+.contactForm input[type=submit] {
+	position: absolute;
+	left: calc(50% - 26.28px);
+	border-radius: 5px;
+	background: rgba(95,169,80,0.8);
+	color: rgba(255, 255, 255, 0.8);
+	transition: all 0.35s;
+	&:hover {
+		color: rgba(95,169,80,0.8);
+		background: rgba(255, 255, 255, 0.8);
+	}
+}
+
+.contactForm img.ajax-loader {
+	width: 16px;
+	height: 16px;
+}
+
+.content p, .content h3, .content a {
+	margin-bottom: 0;
+	color: rgb(90, 89, 89);
+}
+
+.content a:hover {
+	color: rgba(95,169,80,0.8);
+}
+
+.content p a {
+	color: rgba(95,169,80,0.8);
+	&:hover {
+		color: rgb(90, 89, 89);
+	}
+}
+
+article {
+	width: calc(50% - 10px);
+	margin: 0 5px;
+}
+
+iframe {
+	width: 100%;
+	// clear: both;
+}
+
+.contactLogo {
+	text-align: left;
+	clear: both;
+	h2 {
+		font-size: 2rem;
+		margin: 0;
+	}
+	h4 {
+		margin: 0;
+	}
+}
+
+.highlight {
+	color: rgba(95,169,80,0.8)
+}
+
+.contactLogo {
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+	p {
+		text-transform: uppercase;
+	}
+}
+
+.storeInfoWrapper {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+
+.storeInfoA, .storeInfoB {
+	width: 50%;
+	h4 {
+		text-transform: uppercase;
+	}
+	p {
+		// text-align: left;
+		margin: 0 auto;
+		width: 80%;
+	}
+}
+
+img {
+	width: 425px;
+	height: 280px;
+	// float: right;
+}
+
+footer {
+	clear: both;
+	position: relative;
+	bottom: -116px;
+}

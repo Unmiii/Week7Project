@@ -1,5 +1,5 @@
 		</div>
-		<footer>
+		<footer class="clearfix">
 			<div class="footerTop">
 				<div class="footerWidgetWrapper">
 					<?php dynamic_sidebar('footer-widget-area'); ?>	

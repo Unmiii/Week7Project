@@ -180,7 +180,7 @@ function hackeryou_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
-
+	
 	$secondWidgetArea = array(
 		'name' => 'Footer Widget Area',
 		'id' => 'footer-widget-area',

@@ -1,16 +1,15 @@
-.mainPage .container .content {
+.mainPage .content {
 	width: 100%;
 	margin: 0;
+	padding: 0;
 }
 
 nav.homeMainNav li a {
-	// color: rgba(187, 23, 74, 0.9);
-	// color: rgba(187, 52, 83, 0.9);
 	color: rgba(0, 128, 0, 0.85);
 	transition: all 0.35s;
 	&:hover {
-		// color: rgba(187, 52, 83, 0.75);
-		color: rgba(5, 193, 5, 0.85);
+
+		color: rgba(95,169,80, 0.8)
 	}
 }
 
@@ -65,11 +64,11 @@ nav.homeMainNav li a {
 	font-weight: bolder;
 	letter-spacing: 0.5px;
 	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.8);
 }
 
 .letter_fun {
 	padding-bottom: 9px;
-	// padding-bottom: 20px;
 }
 
 .letter_fun .char1 {position: relative; top: 16px; left:-5px;}
@@ -164,4 +163,9 @@ section.homeContent {
 	background-size: cover;
 	height: 100vh;
 	float: left;
+}
+
+div.homeFooter {
+	position: relative;
+	bottom: 116px;
 }

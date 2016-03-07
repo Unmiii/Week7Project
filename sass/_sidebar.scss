@@ -1,4 +1,5 @@
 .sidebar {
+	margin-left: 15px;
 	width: 25%;
 	float: left;
 	ul {
@@ -6,6 +7,12 @@
 		padding: 0;
 		li {
 			list-style: none;
+			a {
+				color: rgb(90, 89, 89);
+				&:hover {
+					color: rgba(95,169,80,0.8);
+				}
+			}
 		}
 	}
 }
